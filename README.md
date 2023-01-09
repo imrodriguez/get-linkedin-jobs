@@ -9,8 +9,10 @@ Install the dependencies:
 ```npm install```
 
 # Run
-Run:
+Normal recommendations:
 ```npm run jobs username password```
+Search for jobs:
+```npm run jobs username password searchstring```
 
 # Save in file
 ```npm run --silent jobs username password > results.json```
