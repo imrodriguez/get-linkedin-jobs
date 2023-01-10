@@ -11,6 +11,7 @@ Install the dependencies:
 # Run
 Normal recommendations:
 ```npm run jobs username password```
+<br/>
 Search for jobs:
 ```npm run jobs username password searchstring```
 
