@@ -1,3 +1,4 @@
+'use strict';
 const getJobsList = async (page) => {
     await page.waitForSelector(".jobs-search-results-list");
     const jobsList = await page.$$(".jobs-search-results-list > ul > li");
@@ -21,6 +22,6 @@ const getJobsList = async (page) => {
     }
 
     return jobs;
-}
+};
 
 module.exports = getJobsList;

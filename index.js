@@ -1,12 +1,13 @@
-
+'use strict';
 const puppeteer = require('puppeteer');
 const login = require('./utils/login');
 const getJobsList = require('./utils/getJobsList');
+require('dotenv').config()
 
 const getJobs = async (username, password, search) => {
     const browser = await puppeteer.launch({ headless: false});
     const page = await browser.newPage();
-    await page.setViewport({"width":1350,"height":976})
+    await page.setViewport({"width":1350,"height":976});
 
     await login(username, password, page);
 
@@ -25,8 +26,8 @@ const getJobs = async (username, password, search) => {
 
     await browser.close();
 
-    return JSON.stringify(jobs)
-}
+    return JSON.stringify(jobs);
+};
 
 const init = async () => {
     const username = process.argv[2];
@@ -39,7 +40,8 @@ const init = async () => {
     }
 
     const jobs = await getJobs(username, password, search);
-    console.log(jobs);
-}
 
-init()
+    console.log(jobs);
+};
+
+init();

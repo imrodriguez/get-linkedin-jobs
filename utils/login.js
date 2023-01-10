@@ -1,3 +1,4 @@
+'use strict';
 const login = async (username, password,page) => {
     await page.goto('https://www.linkedin.com');
     await page.click("input[autocomplete='username']");
